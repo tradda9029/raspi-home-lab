@@ -1,32 +1,61 @@
-# raspi-home-lab
+# Raspberry Pi 5 Home Lab
 
-Raspberry Pi 5 を使って小さなホームラボを構築しながら、Linux、ネットワーク、DNS、Web、監視、セキュリティを学ぶプロジェクトです。
+## Overview
+このプロジェクトは、Raspberry Pi 5 を用いて小さなインフラを実際に構築しながら、Linuxサーバー運用、ネットワーク、DNS、Web、監視、セキュリティ、Python/SQL/Web技術を学ぶ個人プロジェクトである。
 
-## 目的
-このプロジェクトの目的は、実際に手を動かして小さなインフラを構築しながら、サーバー運用やWebインフラの基礎を学ぶことです。  
-同時に、GitHub に学習記録と成果物を残し、将来のポートフォリオにつなげることも目的にしています。
+最終的には Raspberry Pi 上に  
+Hardware → OS → Network → DNS → Web Server → Application → Database → Monitoring → Security  
+の層を持つ小さなホームラボ環境を作ることを目指す。
 
-## 学ぶ内容
+## Goals
+このプロジェクトで主に扱う対象は以下である。
+
 - Linux
 - Networking
 - DNS
-- Web infrastructure
+- HTTP / Web infrastructure
 - Monitoring
 - Security
-- Python
+- Python API
 - SQL
-- API / Web UI
+- Web UI
+- インフラの中で言語を使う感覚
 
-## ディレクトリ構成
-- `notes/` : 学習ログと進捗記録
-- `scripts/python/` : 小さな Python スクリプト
-- `app/learning-log/` : 最終的な実用品アプリ
-- `infra/` : インフラ設定や説明
-- `assets/screenshots/` : スクリーンショットや図
+## Project Policy
+このプロジェクトでは「実装しながら理解する」を基本方針とする。
 
-## 現在の進捗
-- Raspberry Pi の起動
-- SSH 接続
-- Pironman 動作確認
-- Tailscale による外部 SSH 接続
-- GitHub リポジトリ初期構成
+実装 → 疑問が出る → 調べる → 理解する
+
+ただし、内容理解ゼロで先に進まないこと、最初から完全理解を求めすぎないことを重視する。  
+目標は「最低限説明できる理解」を持って前進すること。
+
+また、まずは最小構成で全体像を通し、その後で理解や構成を深める進め方を取る。
+
+## Phase Structure
+- Phase 1: Linux基盤
+- Phase 2: リモートアクセス
+- Phase 3: ネットワーク理解
+- Phase 4: DNS
+- Phase 5: Webサーバー
+- Phase 6: 実用品の最小版構築
+- Phase 7: Monitoring
+- Phase 8: 外部公開
+
+## Repository Structure
+- `notes/phase-1-linux/`
+- `notes/phase-2-remote-access/`
+- `notes/phase-3-network/`
+- `notes/phase-4-dns/`
+- `scripts/python/`
+- `app/learning-log/`
+- `infra/`
+- `assets/screenshots/`
+
+## Notes Policy
+作業記録は phase ごとにディレクトリを分け、日付ベースの個別ファイルとして追加する。  
+ファイル名は日付のみとし、例として `2026-03-12.md` のようにする。  
+大きなログファイルを逐次更新するより、新しい記録を追加していく運用を優先する。
+
+## Output Policy
+このリポジトリでは、コードだけでなく、学習記録、実装記録、設定例、試行錯誤の記録も含めて整理して残す。  
+各フェーズで、小さくても動く成果物を残すことを重視する。
